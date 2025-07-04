@@ -1,3 +1,10 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,3 +13,60 @@
 .menu {
   font-size: 0.8rem;
 }
+
+.neon-divider-particles {
+  position: relative;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff0040, transparent);
+  box-shadow: 
+      0 0 15px #ff0040,
+      0 0 30px #ff0040,
+      0 0 60px #ff0040;
+  margin: 60px auto;
+  max-width: 80%;
+  overflow: hidden;
+}
+
+.neon-divider-particles::before,
+.neon-divider-particles::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ff0040;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff0040;
+  animation: particle-move 3s linear infinite;
+}
+
+.neon-divider-particles::before {
+  left: -10px;
+  animation-delay: 0s;
+}
+
+.neon-divider-particles::after {
+  left: -10px;
+  animation-delay: 1.5s;
+}
+
+.nav_link{
+  position: relative;
+  transition: all 0.2s;
+  color: #ff0040;
+}
+.nav_link::after{
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: #ff0040;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  bottom: -6px;
+  transition: ease-in-out 0.2s;
+ }
+
+ .nav_link:hover::after{
+  opacity: 1;
+ }
+

@@ -15,7 +15,7 @@ router.get('/getALL', async (req, res) => {
         if (data.length > 0) {
             return res.status(200).send({ Reciters: data });
         } else {
-            return res.status(404).send({ success: false, message: "Data Not Found" });
+            return res.status(404).send({ success: false, message: "Reciter Not Found" });
         }
     } catch (error) {
         return res.status(500).send({ success: false, message: "Server Error", error });
@@ -82,9 +82,9 @@ router.delete("/delete/:deleteId", async (req, res) => {
   
     const result = await Reciter.deleteOne(filter);
     if (result.deletedCount === 1) {
-      res.status(200).send({ success: true, msg: "Data Deleted" });
+      res.status(200).send({ success: true, msg: "Reciter Deleted" });
     } else {
-      res.status(200).send({ success: false, msg: "Data Not Found" });
+      res.status(200).send({ success: false, msg: "Reciter Not Found" });
     }
   });
 

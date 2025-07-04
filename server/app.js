@@ -30,10 +30,26 @@ const AlbumRoutes = require("./routes/Albums");
 app.use('/api/Albums/',AlbumRoutes);
 
 
+
+//Podcasts routes
+const PodcastsRoutes = require("./routes/Podcasts");
+app.use('/api/Podcasts/',PodcastsRoutes);
+
+
+
+//Podcasters routes
+const PodcastersRoutes = require("./routes/Podcasters");
+app.use('/api/Podcasters/',PodcastersRoutes);
+
+
+//Books routes
+const BooksRoutes = require("./routes/Books");
+app.use('/api/Books/',BooksRoutes);
+
+
 app.get('/', (req, res) => {
   return res.json("Hi there .....");
 });
-
 
 
 

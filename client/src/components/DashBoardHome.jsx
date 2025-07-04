@@ -58,28 +58,45 @@ const DashBoardHome = () => {
     
   return (
     <motion.div 
-     initial={{ opacity: 0, translateX: -50 }}
-     animate={{ opacity: 1, translateX: 0 }}
-     transition={{ duration: 0.4, delay: 0.56}}
-      className="w-full p-6 flex-wrap flex items-center justify-evenly">
-      {/* prettier-ignore */}
-      <DashboardCard icon={<FaUsersLine className="text-3xl text-red-400" />} name={"Users"} count={allUsers?.Users.length > 0 ? allUsers?.Users.length : 0} />
+  initial={{ opacity: 0, translateX: -50 }}
+  animate={{ opacity: 1, translateX: 0 }}
+  transition={{ duration: 0.45, delay: 0.56 }}
+  className="w-full p-6 flex flex-col md:flex-row flex-wrap items-center justify-evenly gap-6">
+  
+  {/* Dashboard Card - Users */}
+  <DashboardCard icon={<FaUsersLine className="text-3xl text-red-400" />} 
+                 name={"Users"} 
+                 count={allUsers?.Users.length > 0 ? allUsers?.Users.length : 0} 
+                 className="flex-grow"/>
+  
+  {/* Divider */}
+  <div className="border-l-2 border-red-300 h-32 mx-4 hidden md:block"></div>
 
-      <div className="border-l-2 border-red-300 h-32 mx-4"></div>
+  {/* Dashboard Card - Recites */}
+  <DashboardCard icon={<TbBrandGooglePodcasts className="text-3xl text-red-400" />} 
+                 name={"Recites"} 
+                 count={allRecites?.Recites.length > 0 ? allRecites?.Recites.length : 0} 
+                 className="flex-grow"/>
+  
+  {/* Divider */}
+  <div className="border-l-2 border-red-300 h-32 mx-4 hidden md:block"></div>
 
-      {/* prettier-ignore */}
-      <DashboardCard icon={<TbBrandGooglePodcasts className="text-3xl text-red-400" />} name={"Recites"} count={allRecites?.Recites.length > 0 ? allRecites?.Recites.length : 0} />
+  {/* Dashboard Card - Reciters */}
+  <DashboardCard icon={<FaBookOpenReader className="text-3xl text-red-400" />} 
+                 name={"Reciters"} 
+                 count={allReciters?.Reciters.length > 0 ? allReciters?.Reciters.length : 0} 
+                 className="flex-grow"/>
+  
+  {/* Divider */}
+  <div className="border-l-2 border-red-300 h-32 mx-4 hidden md:block"></div>
 
-      <div className="border-l-2 border-red-300 h-32 mx-4"></div>
+  {/* Dashboard Card - Albums */}
+  <DashboardCard icon={<IoIosAlbums className="text-3xl text-red-400" />} 
+                 name={"Albums"} 
+                 count={allAlbums?.Albums.length > 0 ? allAlbums?.Albums.length : 0} 
+                 className="flex-grow"/>
+</motion.div>
 
-      {/* prettier-ignore */}
-      <DashboardCard icon={<FaBookOpenReader className="text-3xl text-red-400" />} name={"Reciters"} count={allReciters?.Reciters.length > 0 ? allReciters?.Reciters.length : 0} />
-      
-      <div className="border-l-2 border-red-300 h-32 mx-4"></div>
-      {/* prettier-ignore */}
-      <DashboardCard icon={<IoIosAlbums className="text-3xl text-red-400" />} name={"Albums"} count={allAlbums?.Albums.length > 0 ? allAlbums?.Albums.length : 0} />
-    </motion.div>
   );
 };
-
 export default DashBoardHome;

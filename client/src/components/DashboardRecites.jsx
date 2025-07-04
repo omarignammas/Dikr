@@ -32,7 +32,7 @@ const DashboardRecites = () => {
 
  
   useEffect(() => {
-    console.log(filteredReciters);
+    // console.log(filteredReciters);
     if (recitefilter) {
       const filtered = allRecites.Recites.filter(
         // prettier-ignore
@@ -47,15 +47,15 @@ const DashboardRecites = () => {
       <div className="w-full flex justify-center items-center gap-4">
       <NavLink
           to={"/dashboard/newRecite"}
-          className="flex text-textColor items-center px-4 py-2 border rounded-md border-gray-300 hover:border-gray-400 hover:shadow-md cursor-pointer"
+          className="flex text-textColor items-center px-4 py-3 border rounded-md border-gray-300 hover:border-gray-400 hover:shadow-md cursor-pointer"
         >
-          Add Recite
+          Add Recite {" "}
           <IoAdd />
         </NavLink>
         <input
           type="text"
           placeholder="Search here"
-          className={`w-50 px-4 py-2 border ${
+          className={`w-56 px-4 py-3 border ${
             isFocus ? "border-gray-500 shadow-md" : "border-gray-300"
           } rounded-md bg-transparent outline-none duration-200 transition-all ease-in-out text-base text-textColor font-semibold`}
           value={recitefilter}
@@ -78,8 +78,8 @@ const DashboardRecites = () => {
       <div className="relative w-full py-12 overflow-x-auto  my-4 flex flex-col items-center justify-start p-4 shadow-xl rounded-md gap-3">
         <div className="absolute top-4 left-4">
           <p className="text-xl font-bold">
-            <span className="text-sm font-semibold text-textColor">
-              Count: {filteredReciters.length || allRecites?.Recites.length}
+            <span className="text-sm font-Kodchasan font-semibold text-textColor">
+              {filteredReciters.length || allRecites?.Recites.length} Recites
             </span>
           </p>
         </div>
