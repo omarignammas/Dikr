@@ -1,7 +1,18 @@
 export const initialState = {
     user : null,
+    searchTerm: "",
     allUsers : null,
     allReciters : null,
+    allPodcasters : null,
     allRecites : null,
+    allPodcasts : null,
     allAlbums : null,
+    reciterFilter : null,
+    podcasterFilter : null,
+    languageFilter : null,
+    albumFilter : null,
+    filterTerm : "all",
+    audio: 0,
+    isAudioPlaying: false,
+    miniPlayer: false,
 };

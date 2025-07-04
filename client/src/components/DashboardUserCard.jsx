@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import moment from "moment";
-import { AiOutlineDelete } from "react-icons/ai";
+import { AiOutlineMessage, AiOutlineDelete } from "react-icons/ai";
 import { useStatevalue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
 import { getAllUsers, changingUserRole, removeUser } from "../api";
@@ -88,10 +88,14 @@ export const DashboardUserCard = ({ data,index }) => {
       >
         {data.role}
       </p>
-      <p className="w-180 md:w-150 flex justify-center gap-2">
+      <p className="w-180 md:w-150 flex justify-center">
         <AiOutlineDelete
-          className="text-2xl w-180 md:w-150 text-red-600 cursor-pointer text-center hover:text-red-400"
+          className="text-2xl ml-5 w-90 md:w-90 text-red-600 cursor-pointer text-center hover:text-red-400"
           onClick={() => setIsDeleteUser(true)}
+        />
+        <AiOutlineMessage
+          className="text-2xl  w-90 md:w-90 text-blue-600 cursor-pointer text-center hover:text-blue-400"
+          
         />
       </p>
       {data._id !== user?.user._id ? (

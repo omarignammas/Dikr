@@ -1,0 +1,30 @@
+import React from "react";
+import { IoSearch } from "react-icons/io5";
+import { actionType } from "../context/reducer";
+import { useStatevalue } from "../context/StateProvider";
+
+const SearchBar = () => {
+  const [{ searchTerm }, dispatch] = useStatevalue();
+
+  const setSearchTerm = (value) => {
+    dispatch({
+      type: actionType.SET_SEARCH_TERM,
+      searchTerm: value,
+    });
+  };
+
+  return (
+      <div className="w-full gap-4 p-4 md:w-2/3 bg-primary shadow-xl shado mt-8 rounded-md flex items-center">
+        <IoSearch className="text-2xl text-textColor" />
+        <input
+          type="text"
+          value={searchTerm}
+          className="w-full h-full bg-transparent text-lg text-textColor  border-none outline-none "
+          placeholder="Search here ...."
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+  );
+};
+
+export default SearchBar;

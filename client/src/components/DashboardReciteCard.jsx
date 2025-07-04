@@ -16,7 +16,7 @@ export const DashboardReciteCard = ({ data,index }) => {
   const createdAt = moment(new Date(data.createdAt)).format("MMMM Do YYYY");
 
 
-  const deletereciter = (reciteId) => {
+  const deleterecite = (reciteId) => {
     setIsLoading(true);
     removeRecite(reciteId).then((res) => {
       if (res) {
@@ -78,7 +78,7 @@ export const DashboardReciteCard = ({ data,index }) => {
               whileTap={{ scale: 0.75 }}
               className="outline-none border-none text-sm px-4 py-1 rounded-md bg-green-200 text-black hover:shadow-md"
               onClick={() => {
-                deletereciter(data._id);
+                deleterecite(data._id);
                 setIsDeleteRecite(false);
               }}
             >

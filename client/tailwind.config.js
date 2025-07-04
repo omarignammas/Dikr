@@ -1,10 +1,35 @@
+const {heroui} = require('@heroui/theme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/@heroui/theme/dist/components/(button|card|chip|image|link|navbar|table|tabs|popover|user|ripple|spinner|checkbox|form|spacer|avatar).js"
+  ],
+  darkMode: 'class',
   theme: {
     extend: {
+      // Fixed: Combined all extensions into single extend object
+      backgroundImage: {
+        'code': "url('/src/assets/img/bgDikr.png')", // Fixed: Relative path
+        'light-code': "url('/src/assets/img/BgDarkScreen.png')", // Fixed: Relative path
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-19px)' },
+        },
+      },
+      animation: {
+        float: 'float 2.7s ease-in-out infinite',
+      },
+      spacing: {
+        '100': '28rem',
+        '110': '30rem',
+      },
       width: {
-        25:  "9rem",
+        25: "7rem",
+        90: "90px",
         140: "140px",
         150: "150px",
         170: "170px",
@@ -27,7 +52,7 @@ module.exports = {
         508: "508px",
       },
       height: {
-        25: "9rem",
+        25: "7rem",
         80: "80px",
         150: "150px",
         180: "180px",
@@ -77,10 +102,12 @@ module.exports = {
       fontFamily: {
         'sans': ['ui-sans-serif', 'system-ui'],
         'Euclid': ['Euclid Circular A', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        'Kodchasan': ['Kodchasan', 'sans-serif'],
+        'Inter': ['Inter', 'sans-serif'],
+        'Questria': ['Questria', 'sans-serif'],
+        'playfair-display-Ds': ['Playfair Display', 'sans-serif']
       },
     },
   },
-  plugins: [
-    // require("tailwind-scrollbar")
-  ],
+  plugins: [heroui()],
 };

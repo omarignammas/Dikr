@@ -1,11 +1,13 @@
-export const isActiveStyle = "text-center text-md font-Euclid subpixel-antialiased text-red-500 underline font-bold ease-out translate-x-1"
-export const isNotActive = "text-center text-textColor text-md  font-Euclid subpixel-antialiased font-semibold hover:text-red-500 hover:underline hover:font-bold ease-in-out translate-x-1"
+export const isActiveStyle = "text-center text-md font-Inter subpixel-antialiased text-red-500  font-bold ease-out translate-x-1"
+export const isNotActive = "text-center text-textColor text-md  font-Inter subpixel-antialiased font-medium hover:text-red-500 hover:font-bold hover:font-bold ease-in-out translate-x-1"
 
 
 
-export const isActiveDashStyle = "text-center text-md font-Euclid font-semibold subpixel-antialiased text-red-500 bg-red-200 p-1 rounded-lg ml-2 "
-export const isNotActiveDash = "text-center text-md font-Euclid subpixel-antialiased font-semibold hover:text-red-600  hover:bg-red-200 hover:p-1 hover:rounded-lg ml-2"
+export const isActiveDashStyle = "text-center  text-lg font-Inter font-medium subpixel-antialiased text-red-500 bg-red-200 p-2 rounded-lg  "
+export const isNotActiveDash = "text-center  text-md font-Inter subpixel-antialiased font-medium hover:text-red-600  hover:bg-red-200 hover:p-2 hover:rounded-lg"
 
+export const isActiveCategoryStyle = "text-base font-medium text-textColor cursor-pointer Stransition-all duration-100 ease-in-out"
+export const isNotActiveCategory = "text-base font-medium text-textColor cursor-pointer hover:font-medium transition-all duration-100 ease-in-out"
 
 export const bgColors = [
     "#E9E2FF",
@@ -15,3 +17,6 @@ export const bgColors = [
     "#E2F4FF",
     "#FFFFE2",
   ];
+
+  
+

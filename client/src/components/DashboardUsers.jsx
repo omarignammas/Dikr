@@ -6,6 +6,8 @@ import { getAllUsers } from "../api";
 import { actionType } from "../context/reducer";
 import { useStatevalue } from "../context/StateProvider";
 import { CiSearch } from "react-icons/ci";
+import { FcApproval } from "react-icons/fc";
+
 
 const DashboardUsers = () => {
   const [emailFilter, setEmailFilter] = useState("");
@@ -30,7 +32,7 @@ const DashboardUsers = () => {
 
  
   useEffect(() => {
-    console.log(filteredUsers);
+    // console.log(filteredUsers);
     if (emailFilter) {
       const filtered = allUsers.Users.filter(
         // prettier-ignore
@@ -46,7 +48,7 @@ const DashboardUsers = () => {
         <input
           type="text"
           placeholder="Search here"
-          className={`w-64 px-4 py-2 border ${
+          className={`w-64 px-4 py-3 border ${
             isFocus ? "border-gray-500 shadow-md" : "border-gray-300"
           } rounded-md bg-transparent outline-none duration-200 transition-all ease-in-out text-base text-textColor font-semibold`}
           value={emailFilter}
@@ -69,13 +71,16 @@ const DashboardUsers = () => {
       <div className="relative w-full py-12 overflow-x-auto  my-4 flex flex-col items-center justify-start p-4 shadow-xl rounded-md gap-3">
         <div className="absolute top-4 left-4">
           <p className="text-xl font-bold">
-            <span className="text-sm font-semibold text-textColor">
-              Count: {filteredUsers.length || allUsers?.Users.length}
+            <span className="text-sm font-Kodchasan font-semibold flex gap-1 text-textColor">
+              {filteredUsers.length || allUsers?.Users.length} Users <FcApproval className="mt-1"/>
             </span>
+            
           </p>
+          
         </div>
+        
         <div className="w-full min-w-[750px] flex flex-col">
-          <div className="flex items-center justify-between bg-slate-200 py-2">
+          <div className="flex font-Kodchasan backdrop-opacity-15 items-center justify-between bg-slate-200 py-2">
             <p className="w-170 text-sm text-textColor font-semibold text-center">Profile</p>
             <p className="w-170 text-sm text-textColor font-semibold text-center">Name</p>
             <p className="w-170 text-sm text-textColor font-semibold text-center">Email</p>
