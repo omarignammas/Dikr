@@ -1,6 +1,6 @@
 # Dikr
 # WELCOME TO DIKR APPLICATION 🕌📿🎧📖
-![DIKR Home](HomeLandingPage.png)
+![DIKR Home](Screenshot 2025-07-05 at 16.59.07.png)
 ---------------------------------------------------------------------------------------------------------------
 
 ## ABOUT DIKR
@@ -22,13 +22,11 @@ During my Journey, I developed this web application called Dikr as a complete re
 
 ### **Reciters - Elevate Your Quranic Journey 👨‍🏫**
 ![DIKR RecitersOptions](RecitersOptions.png)
-
 ![DIKR Home](screenshot-home.png)
+
 ### **Audio Podcasts - Enrich Your Knowledge 🎙️**
 ![DIKR Home](screenshot-home.png)
 
-### **Audio Books - Spiritual Library 📚**
-![DIKR Home](screenshot-home.png)
 
 ### **Admin Dashboard - Complete Management 📊**
 ![DIKR Home](screenshot-home.png)
