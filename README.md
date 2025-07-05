@@ -1,6 +1,6 @@
 # Dikr
 # WELCOME TO DIKR APPLICATION 🕌📿🎧📖
-![DIKR Home](HomePageLanding.png)
+![DIKR Home](HomePageV2.png)
 ---------------------------------------------------------------------------------------------------------------
 
 ## ABOUT DIKR
