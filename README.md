@@ -16,13 +16,13 @@ During my Journey, I developed this web application called Dikr as a complete re
 ## MAIN FEATURES
 
 ### **Home - Your Gateway to Spiritual Enlightenment 🏠**
-![DIKR Home](screenshot-home.png)
+![DIKR Home](HomePageV3.png)
 
 ### **Recitations - Personalized Playlists 🎵**
-![DIKR Home](screenshot-home.png)
+![DIKR Home](DikrFeatures.png)
 
 ### **Reciters - Elevate Your Quranic Journey 👨‍🏫**
-![DIKR RecitersOptions](RecitersOptions.png)
+![DIKR RecitersOptions](RecitersOptionsV1.png)
 ![DIKR Home](screenshot-home.png)
 
 ### **Audio Podcasts - Enrich Your Knowledge 🎙️**
