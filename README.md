@@ -23,7 +23,6 @@ During my Journey, I developed this web application called Dikr as a complete re
 
 ### **Reciters - Elevate Your Quranic Journey 👨‍🏫**
 ![DIKR RecitersOptions](RecitersOptionsV1.png)
-![DIKR Home](screenshot-home.png)
 
 ### **Audio Podcasts - Enrich Your Knowledge 🎙️**
 ![DIKR Home](screenshot-home.png)
@@ -72,23 +71,6 @@ During my Journey, I developed this web application called Dikr as a complete re
 - **Git/GitHub** - Version control
 - **Agile methodology** - Iterative development approach
 
-
-
-### Main Interface
-![DIKR Home](screenshot-home.png)
-*Homepage with intuitive navigation and feature presentation*
-
-### Recitation Management
-![Recitations](screenshot-recitations.png)
-*Personalized playlist system with advanced audio controls*
-
-### Reciters Dashboard
-![Reciters](screenshot-reciters.png)
-*Reciter discovery interface with filters and detailed profiles*
-
-### Admin Panel
-![Administration](screenshot-admin.png)
-*Administrator dashboard with statistics and content management*
 
 ## CONTRIBUTION
 
