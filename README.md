@@ -5,9 +5,12 @@
 
 ## ABOUT DIKR
 DIKR is your comprehensive digital spiritual companion, designed to support your spiritual development journey through the Holy Quran. Our application offers an immersive and personalized experience for listening, managing, and discovering Quranic recitations from around the world.
+![DIKR AboutSection](AboutSection.png)
 
 ## PROJECT OVERVIEW
-During my internship, I developed this web application called Dikr as a complete resource for Quranic playlists, allowing users to listen, organize, and share recitations. The development of this application enabled me to apply my web development skills while exploring modern technologies such as React.js, Node.js, MongoDB, and Firebase.
+During my Journey, I developed this web application called Dikr as a complete resource for Quranic playlists, allowing users to listen, organize, and share recitations. The development of this application enabled me to apply my web development skills while exploring modern technologies such as React.js, Node.js, MongoDB, and Firebase.
+![DIKR RecitersSection](FeaturedRecitersSection.png)
+![DIKR ContactSection](ContactSection.png)
 
 ## MAIN FEATURES
 
@@ -18,6 +21,7 @@ During my internship, I developed this web application called Dikr as a complete
 ![DIKR Home](screenshot-home.png)
 
 ### **Reciters - Elevate Your Quranic Journey 👨‍🏫**
+![DIKR RecitersOptions](RecitersOptions.png)
 
 ![DIKR Home](screenshot-home.png)
 ### **Audio Podcasts - Enrich Your Knowledge 🎙️**
