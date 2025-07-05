@@ -1,4 +1,4 @@
-# WELCOME TO DIKR WEB APPLICATION 🕌📿🎧📖
+# WELCOME TO DIKR WEB APPLICATION 🕌📿🎧
 ![DIKR Home](HomeLPage.png)
 ---------------------------------------------------------------------------------------------------------------
 
