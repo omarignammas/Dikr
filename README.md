@@ -25,14 +25,14 @@ During my Journey, I developed this web application called Dikr as a complete re
 ![DIKR RecitersOptions](RecitersOptionsV1.png)
 
 ### **Audio Podcasts - Enrich Your Knowledge 🎙️**
-![DIKR Home](screenshot-home.png)
+![DIKR Home](PodcastHome.png)
 
 
 ### **Admin Dashboard - Complete Management 📊**
-![DIKR Home](screenshot-home.png)
+![DIKR Home](RecitesManagement.png)
 
 ### **User Profile Management 👤**
-![DIKR Home](screenshot-home.png)
+![DIKR Home](UsersManagement.png)
 
 
 
