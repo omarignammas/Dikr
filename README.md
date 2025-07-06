@@ -29,10 +29,10 @@ During my Journey, I developed this web application called Dikr as a complete re
 
 
 ### **Admin Dashboard - Complete Management 📊**
-![DIKR Home](RecitesManagement.png)
+![DIKR RecitesGestion](RecitesManagmenet.png)
 
 ### **User Profile Management 👤**
-![DIKR Home](UsersManagement.png)
+![DIKR UsersGestion](UsersMangement.png)
 
 
 
