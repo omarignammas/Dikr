@@ -2,10 +2,11 @@ import React from "react";
 import { HomeOptions } from "../assets/img/index";
 import { motion } from "framer-motion";
 import {NewsletterForm} from "../components/index";
+import { ParallaxLayer } from "@react-spring/parallax";
 
 const FooterSection = () => {
   return (
-    <footer id="FooterSection" className=" bg-gradient-to-br  from-orange-200 via-orange-300 to-orange-300  pt-10">
+    <footer id="FooterSection" className="bg-gradient-to-br from-orange-200 via-orange-300 to-orange-300  pt-10">
       {/* Bloc principal avec l'image et la newsletter */}
       {/* Left Content */}
       <motion.div

@@ -6,7 +6,7 @@ const user = require("../models/user");    // importing user shema
 
 
 // Routing to the login page 
-router.get("/login",async (req,res)=> {
+router.get("/",async (req,res)=> {
     if(!req.headers.authorization){
         return res.status(500).send({message : "Invalid Token"})
     }

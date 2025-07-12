@@ -12,6 +12,9 @@ export {default as RecitersOptions} from "../img/RecitersOptions.png";
 export {default as BgAbout} from "../img/BgAbout.png";
 export {default as BgReciters} from "../img/BgReciters.png";
 export {default as HomeOptions} from "../img/HomeOptions.png";
+export {default as BgDarkScreen} from "../img/BgDarkScreen.png";
 
+
+export {default as Afaaq} from "../img/Afaaq.png";
 export {default as AboutHomeOptions} from "../img/AboutHomeOptions.png";
 

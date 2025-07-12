@@ -7,7 +7,7 @@ import { IoIosAlbums } from "react-icons/io";
 import { getAllAlbums, getAllRecites, getAllReciters,getAllUsers } from "../api";
 import { actionType } from "../context/reducer";
 import { useStatevalue } from "../context/StateProvider";
-import { DashboardCard } from "./DashboardCard";
+import StatsSection, { DashboardCard } from "./DashboardCard";
 
 const DashBoardHome = () => {
   const [{ allUsers, allRecites, allReciters, allAlbums }, dispatch] = useStatevalue();
@@ -69,8 +69,7 @@ const DashBoardHome = () => {
                  count={allUsers?.Users.length > 0 ? allUsers?.Users.length : 0} 
                  className="flex-grow"/>
   
-  {/* Divider */}
-  <div className="border-l-2 border-red-300 h-32 mx-4 hidden md:block"></div>
+
 
   {/* Dashboard Card - Recites */}
   <DashboardCard icon={<TbBrandGooglePodcasts className="text-3xl text-red-400" />} 
@@ -78,8 +77,7 @@ const DashBoardHome = () => {
                  count={allRecites?.Recites.length > 0 ? allRecites?.Recites.length : 0} 
                  className="flex-grow"/>
   
-  {/* Divider */}
-  <div className="border-l-2 border-red-300 h-32 mx-4 hidden md:block"></div>
+  
 
   {/* Dashboard Card - Reciters */}
   <DashboardCard icon={<FaBookOpenReader className="text-3xl text-red-400" />} 
@@ -87,14 +85,14 @@ const DashBoardHome = () => {
                  count={allReciters?.Reciters.length > 0 ? allReciters?.Reciters.length : 0} 
                  className="flex-grow"/>
   
-  {/* Divider */}
-  <div className="border-l-2 border-red-300 h-32 mx-4 hidden md:block"></div>
+
 
   {/* Dashboard Card - Albums */}
   <DashboardCard icon={<IoIosAlbums className="text-3xl text-red-400" />} 
                  name={"Albums"} 
                  count={allAlbums?.Albums.length > 0 ? allAlbums?.Albums.length : 0} 
                  className="flex-grow"/>
+ 
 </motion.div>
 
   );

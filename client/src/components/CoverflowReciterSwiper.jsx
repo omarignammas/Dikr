@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
+import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -9,8 +9,7 @@ import ReciterCardHome from './ReciterCardHome';
 
 // Version alternative avec effet Coverflow
 const CoverflowReciterSwiper = ({ allReciters }) => {
-    const [activeIndex, setActiveIndex] = useState(1); // Start with middle slide active
-    const [swiperInstance, setSwiperInstance] = useState(null);
+
   
     // Configuration responsive
     const breakpoints = {

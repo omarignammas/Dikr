@@ -70,3 +70,13 @@
   opacity: 1;
  }
 
+
+.Card-Scale{
+  transition: all .3s ease-in-out;
+}
+
+.Card-Scale:hover{
+  transform: scale(1.03);
+  
+}
+

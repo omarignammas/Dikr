@@ -37,7 +37,7 @@ const Header = () => {
     
 
   return (
-    <header className="flex items-center p-4 h-80 w-full md:py-2 md:px-6 font-Euclid shadow-lg fixed top-0 left-0 right-0 z-50 bg-white">
+    <header className="flex items-center p-4 h-80 w-full md:py-2 md:px-6 font-Euclid shadow-lg fixed top-0 left-0 right-0 z-50 backdrop-blur-lg">
     <NavLink to={"/"}>
         <img src={Logo} alt='Logo' className='w-140 w-min-[130px] md:w-150 sm:w-150'/>
     </NavLink>
@@ -66,7 +66,7 @@ const Header = () => {
        <img src={user?.user.imageURL} alt='profile' className='h-10 min-w-[40px] w-10 rounded-full border-2 object-cover shadow-lg ml-28 mt-5' referrerPolicy="no-referrer" />
          <p className='text-xs text-gray-400 gap-0 font-Euclid font-semibold text-center underline'>{user?.user.email}</p>
          <NavLink to={'/userprofile'}>
-            <button className='text-xs text-gray-500 gap-0 font-Euclid  hover:text-textColor hover:underline text-center ml-16' >Manage Your Dikr Account</button>
+            <button className='text-xs text-gray-500 gap-0 font-Euclid hover:text-red-500 text-center ml-16' >Manage Your Dikr Account</button>
          </NavLink>
 
          <hr/>

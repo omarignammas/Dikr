@@ -76,8 +76,8 @@ const DashboardRecites = () => {
       <div className="relative w-full py-12 overflow-x-auto  my-4 flex flex-col items-center justify-start p-4 shadow-xl rounded-md gap-3">
         <div className="absolute top-4 left-4">
           <p className="text-xl font-bold">
-            <span className="text-sm font-Euclid font-semibold text-textColor">
-              Count: {filteredReciters.length || allRecites?.Recites.length}
+            <span className="text-sm font-Kodchasan font-semibold text-gray-500">
+              + {filteredReciters.length || allRecites?.Recites.length} Recitations
             </span>
           </p>
         </div>

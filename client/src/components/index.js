@@ -44,8 +44,14 @@ export {default as UserProfile} from "../components/UserProfile";
 export {default as HomePodcasts} from "../components/HomePodcasts";
 export {default as DashboardPodcasts} from "../components/DashboardPodcasts";
 export {default as DashboardNewPodcasts} from "../components/DashboardNewPodcasts";
+export {default as DashboardBooks} from "../components/DashboardBooks";
+export {default as DashboardNewBook} from "../components/DashboardNewBook";
+export {default as SignUp} from "../components/SignUp";
 
 
+export {default as Stepper} from "../components/Stepper";
+export {default as Step} from "../components/Step";
+export {default as RegistrationButton} from "../components/RegistrationButton";
 
 
 

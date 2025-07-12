@@ -5,6 +5,8 @@ import { useStatevalue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
 import { motion } from "framer-motion";
 import {AutoReciterSwiper} from "../components/index";
+import { ParallaxLayer } from "@react-spring/parallax";
+import BlurText from "./BlurText";
 
 
 
@@ -23,11 +25,14 @@ const RecitersSection = () => {
         });
       }
     }, [allReciters,dispatch]);
-
+    
+    const handleAnimationComplete = () => {
+        console.log('Animation completed!');
+      };
 
     return(
         <section id="RecitersSection" className='relative min-h-[90vh] py-28  bg-gradient-to-tr from-orange-300 via-red-500 to-orange-300 px-4 sm:px-8 lg:px-16'>
-        
+   
         {/* Background Pattern */} 
         <div className="absolute inset-0  opacity-10">
 
@@ -49,14 +54,33 @@ const RecitersSection = () => {
             viewport={{ once: true }}
             className='text-center mb-11'
           >
-            <h2 className='text-4xl sm:text-5xl lg:text-6xl font-semibold font-Kodchasan mt-10 text-white mb-4'>
-              Featured Reciters
-            </h2>
-            <p className='text-sm text-orange-200 max-w-3xl mx-auto leading-relaxed font-Kodchasan'>
-              Discover the voices that have touched millions of hearts around the world. 
-              Each reciter brings their unique style and spiritual depth to the Holy Quran.
-            </p>
-          
+          <BlurText
+           text="Featured Reciters"
+           delay={180}
+           animateBy="words"
+          direction="top"
+          onAnimationComplete={handleAnimationComplete}
+          className="className='text-3xl sm:text-5xl lg:text-6xl font-semibold font-Kodchasan ml-[30%] mt-10 text-white mb-4"
+         />
+
+        <BlurText
+           text="Discover the voices that have touched millions of hearts around the world."
+           delay={100}
+           animateBy="words"
+           direction="top"
+          onAnimationComplete={handleAnimationComplete}
+          className="text-sm ml-[30%] text-orange-200 max-w-3xl mx-auto leading-relaxed font-Kodchasan"
+         />
+         <BlurText
+           text="Each reciter brings their unique style and spiritual depth to the Holy Quran."
+           delay={100}
+           animateBy="words"
+           direction="top"
+          onAnimationComplete={handleAnimationComplete}
+          className="text-sm ml-[30%] text-orange-200 max-w-3xl mx-auto leading-relaxed font-Kodchasan"
+         />
+        
+            
 
              <AutoReciterSwiper allReciters={allReciters} />
 

@@ -6,10 +6,11 @@ import { bgDikr,AboutHomeOptions } from "../assets/img/index";
 const AboutSection = () => {
 
     return(
-        <section id="AboutSection" className='relative min-h-[94vh] py-20   bg-gradient-to-br  from-orange-200 via-orange-400 to-red-200  px-4 sm:px-8 lg:px-16 overflow-hidden'>
-        
+        <section id="AboutSection" className='relative min-h-[94vh] py-20 bg-gradient-to-br  from-orange-200 via-orange-400 to-red-200  px-4 sm:px-8 lg:px-16 overflow-hidden'>
         {/* Background Image */}
+        
         <div  className="absolute inset-0 opacity-20">
+        
           <img 
             src={bgDikr} 
             alt="background" 
@@ -17,7 +18,7 @@ const AboutSection = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-orange-300 via-orange-200 to-red-200"></div>
         </div>
-
+     
         {/* Floating decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-orange-500 rounded-full animate-pulse opacity-40"></div>
@@ -39,7 +40,7 @@ const AboutSection = () => {
             >
               {/* Header */}
               <div className="text-center lg:text-left">
-                <h2 className='text-6xl sm:text-7xl lg:text-8xl font-bold font-Kodchasan text-orange-500 mb-4'>
+                <h2 className='text-6xl sm:text-6xl lg:text-7xl font-bold font-Kodchasan text-orange-500 mb-4'>
                   About Us
                 </h2>
                 <p className='text-lg text-red-700 font-Questria font-medium'>

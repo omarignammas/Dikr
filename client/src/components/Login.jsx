@@ -14,7 +14,7 @@ import { useState } from 'react';
 import { Home } from '../assets/img/index';
 import { NavbarLandingPage,AboutSection ,RecitersSection, FooterSection} from '../components/index';
 import {UseScrollPosition} from "../Hooks/UseScrollPosition";
-import {StickyHeader} from '../components/index';
+import { NavLink } from 'react-router-dom';
 
 
 function FloatingDots() {
@@ -103,10 +103,8 @@ const Login = ({Setauth}) => {
 
   useEffect(() => {
     if(window.localStorage.getItem("auth") === "true"){
-      Navigate("/",{replace:true});
-    }else{
-      Navigate("/login");
-    }   
+      Navigate("/Home",{replace:true});
+    }  
   }, [])
     
   const signInWithGoogle = async () => {
@@ -123,7 +121,7 @@ const Login = ({Setauth}) => {
                 });
               });
             })
-            Navigate('/',{replace :'true'});
+            Navigate('/Home',{replace :'true'});
           }
           else{
             Setauth && Setauth(false);
@@ -132,7 +130,7 @@ const Login = ({Setauth}) => {
               type : actionType.SET_USER,
               user :  null,
             })
-            Navigate('/login');
+            Navigate('/');
           }
         })
       }
@@ -166,19 +164,17 @@ const Login = ({Setauth}) => {
      
   return (
     <div className='w-screen min-h-[150vhd] relative overflow-x-hidden'>
-       {/* Header Sticky */}
-       <StickyHeader isVisible={showStickyHeader} onScrollTo={onScrollTo} />
+
       {/* Hero Section */}
       <motion.div
         ref={heroRef}
-        initial={{ opacity: 0, translateY: -50 }}
-        animate={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 1.25, delay: 0.8 }} 
+       
         className='w-full h-screen relative overflow-hidden'>
        
         {/* Background Image */}
         <img src={bgDikr} alt='background image' className='w-full h-full object-cover absolute inset-0'/>
         
+
         <FloatingDots />
 
         {/* Header */}
@@ -224,10 +220,11 @@ const Login = ({Setauth}) => {
                 <path fillRule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' clipRule='evenodd'/>
               </svg>
             </div>
-            
+            <NavLink to={'/SignUp'}>
             <button className='bg-gradient-to-br from-[#FF4800] to-[#FFA784] hover:bg-red-500 font-light text-white px-6 py-2 rounded-full font-Questria transition-colors duration-200'>
               Sign Up
             </button>
+            </NavLink>
           </div>
         </motion.div>
         
@@ -247,6 +244,7 @@ const Login = ({Setauth}) => {
               />
             </h1>
             
+
             <h2 className='text-3xl sm:text-4xl lg:text-6xl font-bold font-Kodchasan text-orange-500 mb-6 leading-tight'>
               Beautiful Quran<br/>
               recitations
@@ -274,7 +272,7 @@ const Login = ({Setauth}) => {
     max-w-none h-auto shadow-lg object-cover border-red-300 shadow-red-500 rounded-md 
     -mt-[8vh] sm:-mt-[10vh] md:-mt-[12vh] lg:-mt-[10vh] xl:-mt-[15vh]
     ml-[15vw] sm:ml-[20vw] md:ml-[25vw] lg:ml-[12vw] xl:-ml-[0vw]
-    animate-float
+    animate-float 
   "
 />
 <img
@@ -285,7 +283,7 @@ const Login = ({Setauth}) => {
     max-w-none h-auto shadow-lg object-cover border-red-300 shadow-red-500 rounded-md z-10
     mt-[40vh] sm:mt-[40vh] md:mt-[50vh] lg:mt-[20vh] xl:mt-[20vh]
     -ml-[25vw] sm:-ml-[40vw] md:-ml-[30vw] lg:-ml-[20vw] xl:-ml-[25vw]
-    animate-float
+    animate-float 
   "
 />
         </motion.div>
@@ -325,4 +323,3 @@ const Login = ({Setauth}) => {
 }
  
 export default Login;
-

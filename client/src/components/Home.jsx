@@ -161,7 +161,7 @@ export const HomeaudioContainer = ({ audios }) => {
     initial={{ opacity: 0, translateX: -50 }}
     animate={{ opacity: 1, translateX: 0 }}
     transition={{ duration: 0.3, delay: index * 0.1 }}
-    className="relative w-40 min-w-210 px-4 py-4 cursor-pointer hover:shadow-xl hover:bg-card bg-gray-100 shadow-md rounded-lg flex flex-col items-center"
+    className="relative w-40 min-w-210 px-4 py-4 cursor-pointer hover:shadow-xl hover:bg-card bg-gray-100 shadow-md rounded-lg flex flex-col items-center "
     onClick={() => addaudioToContext(index)}
   >
     <div className=" w-48 min-w-[160px] h-40 min-h-[160px] rounded-lg drop-shadow-lg relative overflow-hidden">

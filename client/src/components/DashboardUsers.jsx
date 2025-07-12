@@ -8,7 +8,6 @@ import { useStatevalue } from "../context/StateProvider";
 import { CiSearch } from "react-icons/ci";
 import { FcApproval } from "react-icons/fc";
 
-
 const DashboardUsers = () => {
   const [emailFilter, setEmailFilter] = useState("");
   const [isFocus, setIsFocus] = useState(false);
@@ -30,69 +29,114 @@ const DashboardUsers = () => {
     fetchUsers();
   }, [allUsers, dispatch]);
 
- 
   useEffect(() => {
-    // console.log(filteredUsers);
     if (emailFilter) {
       const filtered = allUsers.Users.filter(
-        // prettier-ignore
-        (data) =>  data.email.includes(emailFilter) || data.name.includes(emailFilter) || data.role.includes(emailFilter)
+        (data) => 
+          data.email.includes(emailFilter) || 
+          data.name.includes(emailFilter) || 
+          data.role.includes(emailFilter)
       );
       setFilteredUsers(filtered);
     }
-  }, [emailFilter]);
+  }, [emailFilter, allUsers]);
+
+  // Memoization pour éviter les re-renders inutiles
+  const displayUsers = filteredUsers.length > 0 ? filteredUsers : allUsers?.Users || [];
 
   return (
-    <div className="w-full p-4 flex items-center justify-center flex-col">
-      <div className="w-full flex justify-center items-center gap-4">
-        <input
-          type="text"
-          placeholder="Search here"
-          className={`w-64 px-4 py-3 border ${
-            isFocus ? "border-gray-500 shadow-md" : "border-gray-300"
-          } rounded-md bg-transparent outline-none duration-200 transition-all ease-in-out text-base text-textColor font-semibold`}
-          value={emailFilter}
-          onChange={(e) => setEmailFilter(e.target.value)}
-          onBlur={() => setIsFocus(false)}
-          onFocus={() => setIsFocus(true)}
-        />
-        <CiSearch className="text-2xl font-semibold text-textColor cursor-pointer" />
-        <motion.i
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          whileTap={{ scale: 0.75 }}
-          onClick={() => {
-            setEmailFilter("");
-          }}
-        >
-          <AiOutlineClear className="text-2xl text-textColor cursor-pointer" onClick={() => setFilteredUsers([]) } />
-        </motion.i>
-      </div>
-      <div className="relative w-full py-12 overflow-x-auto  my-4 flex flex-col items-center justify-start p-4 shadow-xl rounded-md gap-3">
-        <div className="absolute top-4 left-4">
-          <p className="text-xl font-bold">
-            <span className="text-sm font-Kodchasan font-semibold flex gap-1 text-textColor">
-              {filteredUsers.length || allUsers?.Users.length} Users <FcApproval className="mt-1"/>
-            </span>
-            
-          </p>
-          
-        </div>
+    // Container principal avec background fixe
+    <div className="min-h-screen w-full bg-primary"> {/* Ajoutez votre couleur de fond ici */}
+      <div className="container mx-auto px-4 py-6">
         
-        <div className="w-full min-w-[750px] flex flex-col">
-          <div className="flex font-Kodchasan backdrop-opacity-15 items-center justify-between bg-slate-200 py-2">
-            <p className="w-170 text-sm text-textColor font-semibold text-center">Profile</p>
-            <p className="w-170 text-sm text-textColor font-semibold text-center">Name</p>
-            <p className="w-170 text-sm text-textColor font-semibold text-center">Email</p>
-            <p className="w-170 text-sm text-textColor font-semibold text-center">Verified</p>
-            <p className="w-170 text-sm text-textColor font-semibold text-center">Created</p>
-            <p className="w-170 text-sm text-textColor font-semibold text-center">Role</p>
-            <p className="w-170 text-sm text-textColor font-semibold text-center">Actions</p>
-            <p className="w-170 text-sm text-textColor font-semibold text-center">Update</p>
+        {/* Section de recherche */}
+        <div className="mb-6">
+          <div className="flex justify-center items-center gap-4">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search users..."
+                className={`w-80 px-4 py-3 pl-10 border ${
+                  isFocus ? "border-gray-500 shadow-lg" : "border-gray-300"
+                } rounded-lg bg-white outline-none duration-200 transition-all ease-in-out text-base text-gray-700 font-medium`}
+                value={emailFilter}
+                onChange={(e) => setEmailFilter(e.target.value)}
+                onBlur={() => setIsFocus(false)}
+                onFocus={() => setIsFocus(true)}
+              />
+              <CiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl text-gray-400" />
+            </div>
+            
+            {emailFilter && (
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => {
+                  setEmailFilter("");
+                  setFilteredUsers([]);
+                }}
+                className="p-3 rounded-lg bg-white shadow-md hover:shadow-lg transition-shadow duration-200"
+              >
+                <AiOutlineClear className="text-xl text-gray-600" />
+              </motion.button>
+            )}
           </div>
-          {(filteredUsers.length > 0 ? filteredUsers : allUsers?.Users)?.map((data, i) => (
-            <DashboardUserCard data={data} key={data._id} index={i} />
-          ))}
+        </div>
+
+        {/* Section principale du tableau */}
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          
+          {/* Header avec statistiques */}
+          <div className="px-6 py-4 bg-gray-50 border-b">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <h2 className="text-md font-Inter font-medium text-gray-800">Users Management</h2>
+                <FcApproval className="text-xl" />
+              </div>
+              <div className="flex items-center gap-2 text-sm font-semibold text-gray-600">
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+                  {displayUsers.length} Users
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Tableau avec scroll horizontal */}
+          <div className="overflow-x-auto">
+            <div className="min-w-[800px]"> {/* Largeur minimale pour éviter le scroll sur desktop */}
+              
+              {/* Header du tableau */}
+              <div className="grid grid-cols-8 gap-5 px-6 py-4 bg-gray-100 border-b font-semibold text-sm text-gray-700">
+                <div className="text-center">Profile</div>
+                <div className="text-center">Name</div>
+                <div className="text-center">Email</div>
+                <div className="text-center">Verified</div>
+                <div className="text-center">Created</div>
+                <div className="text-center">Role</div>
+                <div className="text-center">Actions</div>
+                <div className="text-center">Update</div>
+              </div>
+
+              {/* Body du tableau */}
+              <div className="divide-y mr-2 divide-gray-200">
+                {displayUsers.length > 0 ? (
+                  displayUsers.map((data, i) => (
+                    <DashboardUserCard 
+                      data={data} 
+                      key={data._id} 
+                      index={i} 
+                    />
+                  ))
+                ) : (
+                  <div className="px-6 py-12 text-center text-gray-500">
+                    <p className="text-lg">No users found</p>
+                    <p className="text-sm">Try adjusting your search criteria</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

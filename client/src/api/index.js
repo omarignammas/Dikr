@@ -3,7 +3,7 @@ const BaseURL = "http://localhost:4000/";
 
 export const ValidateUser = async (token) => {
     try {
-        const res = await axios.get(`${BaseURL}api/users/login`,{
+        const res = await axios.get(`${BaseURL}api/users/`,{
             headers : {
                 Authorization : "Bearer " + token,
             }
@@ -73,6 +73,15 @@ export const getAllAlbums = async () => {
     }
 };
 
+export const getAllBooks = async () => {
+  try {
+      const res = await axios.get(`${BaseURL}api/Albums/getALL`);
+      return res.data;
+  } catch (error) {
+      return null;
+  }
+};
+
 export const removeUser = async (userId) => {
     try {
       const res = axios.delete(`${BaseURL}api/users/delete/${userId}`);
@@ -109,6 +118,16 @@ export const removeUser = async (userId) => {
     }
   };
 
+  export const removeAuteur = async (auteurId) => {
+    try {
+      const res = axios.delete(`${BaseURL}api/Auteurs/delete/${auteurId}`);
+      return res;
+    } catch (error) {
+      return null;
+    }
+  };
+
+
   export const removePodcaster = async (podcasterId) => {
     try {
       const res = axios.delete(`${BaseURL}api/Podcasters/delete/${podcasterId}`);
@@ -128,6 +147,17 @@ export const removeUser = async (userId) => {
   };
 
   export const changingUserRole = async (userId, role) => {
+    try {
+      const res = axios.put(`${BaseURL}api/users/updateRole/${userId}`, {
+        data: { role: role },
+      });
+      return res;
+    } catch (error) {
+      return null;
+    }
+  };
+
+  export const UpdateUserCredentials = async (userId, role) => {
     try {
       const res = axios.put(`${BaseURL}api/users/updateRole/${userId}`, {
         data: { role: role },
@@ -174,6 +204,24 @@ export const removeUser = async (userId) => {
     }
   };
 
+  export const saveNewBook = async (data) => {
+    try {
+      const res = axios.post(`${BaseURL}api/Books/save`, { ...data });
+      return (await res).data.book;
+    } catch (error) {
+      return null;
+    }
+  };
+
+  export const saveNewAuteur = async (data) => {
+    try {
+      const res = axios.post(`${BaseURL}api/Auteurs/save`, { ...data });
+      return (await res).data.Auteur;
+    } catch (error) {
+      return null;
+    }
+  };
+
   export const saveNewPodcaster = async (data) => {
     try {
       const res = axios.post(`${BaseURL}api/Podcasters/save`, { ...data });
@@ -186,6 +234,15 @@ export const removeUser = async (userId) => {
   export const deleteRecite = async (id) => {
     try {
       const res = axios.delete(`${BaseURL}api/Recites/delete/${id}`);
+      return res;
+    } catch (error) {
+      return null;
+    }
+  };
+
+  export const deleteBook = async (id) => {
+    try {
+      const res = axios.delete(`${BaseURL}api/Books/delete/${id}`);
       return res;
     } catch (error) {
       return null;

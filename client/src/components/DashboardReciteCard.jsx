@@ -36,7 +36,7 @@ export const DashboardReciteCard = ({ data,index }) => {
      initial={{ opacity: 0, translateY: -50 }}
      animate={{ opacity: 1, translateY: 0 }}
      transition={{ duration: 0.3, delay: index * 0.1 }}
-      className="relative w-full font-Euclid rounded-md flex items-center justify-between py-3 bg-lightOverlay cursor-pointer hover:bg-card hover:shadow-md"
+      className="relative w-full font-Euclid rounded-md flex items-center justify-between py-3  cursor-pointer hover:bg-card hover:shadow-md"
     >
       <p className="w-225 flex items-center justify-center">
         <img

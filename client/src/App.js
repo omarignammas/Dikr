@@ -12,7 +12,7 @@ import {
   Contact, 
   HomePodcasts,
   PodcastPlayer, 
-  RecitersSection
+  SignUp
 } from "./components/index";
 import { getAuth } from "firebase/auth";
 import { app } from "./config/firebase.config";
@@ -53,7 +53,6 @@ const App = () => {
         });
         setIsLoading(false);
         window.localStorage.setItem("auth", "false");
-        navigate("/login");
       }
     });
   }, [dispatch, firebaseAuth, navigate]);
@@ -70,7 +69,7 @@ const App = () => {
   }, [allRecites, dispatch]);
 
   const getPlayerComponent = () => {
-    if (location.pathname === "/") {
+    if (location.pathname === "/Home") {
       return <RecitePlayer />;
     }
     if (location.pathname === "/podcasts") {
@@ -89,15 +88,15 @@ const App = () => {
             </div>
           ))}
         <Routes>
-          <Route path="/login" element={<Login setAuth={setAuth} />} />
-          <Route path="/*" element={<Home />} />
+          <Route path="/*" element={<Login setAuth={setAuth} />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/podcasts" element={<HomePodcasts />} />
           <Route path="/About" element={<About />} />
           <Route path="/Recites" element={<Recites />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Dashboard/*" element={<Dashboard />} />
           <Route path="/userProfile" element={<UserProfile />} />
-          <Route path="/ReciterSection" element={<RecitersSection />} />
+          <Route path="/SignUp" element={<SignUp />} />
         </Routes>
 
         {isAudioPlaying && (
