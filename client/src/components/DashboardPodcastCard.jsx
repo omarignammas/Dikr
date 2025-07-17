@@ -45,9 +45,9 @@ export const DashboardPodcastCard = ({ data,index }) => {
           className="ml-3 h-16 w-20 rounded-sm border-2 object-cover border-red-300 shadow-lg"
           referrerPolicy="no-referrer"
         />
-        <p className="w-250 text-sm mr-4 flex flex-col font-semibold font-Euclid text-center gap-1 text-gray-600">
+        <p className="w-250 text-sm mr-4 flex flex-col font-semibold font-Euclid text-center gap-1 ml-4 text-gray-600">
         <p className=" w-250 text-sm flex font-semibold font-Euclid text-center gap-1 text-gray-600">
-          {data.name.length > 25 ? `${data.name.slice(0, 50)}` : data.name}
+          {data.name.length > 30 ? `${data.name.slice(0, 55)}` : data.name}
         </p>
 
             <p className="w-160 text-sm font-Euclid text-lighttextGray">{data.Podcaster}</p>

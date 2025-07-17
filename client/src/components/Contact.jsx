@@ -39,7 +39,6 @@ const Contact = () => {
     transition={{ duration: 0.30, delay: 0.6 }}
     className="w-full h-full flex flex-col pt-20 md:pt-24 px-5 items-center justify-center gap-6 "
   >
-    <Header />
 
     <footer id="FooterSection" className="pt-10">
       {/* Bloc principal avec l'image et la newsletter */}

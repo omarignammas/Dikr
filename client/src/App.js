@@ -12,7 +12,9 @@ import {
   Contact, 
   HomePodcasts,
   PodcastPlayer, 
-  SignUp
+  SignUp,
+  HomeBooks,
+  Header
 } from "./components/index";
 import { getAuth } from "firebase/auth";
 import { app } from "./config/firebase.config";
@@ -78,9 +80,15 @@ const App = () => {
     return null;
   };
 
+  // Check if current path is login page
+  const isLoginPage = location.pathname === "/" || location.pathname === "/SignUp" ;
+
   return (
     <AnimatePresence mode="wait">
       <div className="h-auto min-w-[680px] bg-primary flex justify-center items-center">
+        {/* Conditionally render Header - Don't show on login page */}
+        {!isLoginPage && <Header />}
+        
         {isLoading ||
           (!user && (
             <div className="fixed inset-0 bg-loaderOverlay backdrop-blur-sm ">
@@ -91,6 +99,7 @@ const App = () => {
           <Route path="/*" element={<Login setAuth={setAuth} />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/podcasts" element={<HomePodcasts />} />
+          <Route path="/books" element={<HomeBooks />} />
           <Route path="/About" element={<About />} />
           <Route path="/Recites" element={<Recites />} />
           <Route path="/contact" element={<Contact />} />

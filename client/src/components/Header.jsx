@@ -32,7 +32,7 @@ const Header = () => {
         firebaseAuth.signOut().then(()=> {
           window.localStorage.setItem('auth','false');
         }).catch((e)=> {console.log(e)});
-        navigate('/login',{replace : true});
+        navigate('/',{replace : true});
     };
     
 

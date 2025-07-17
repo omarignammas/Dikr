@@ -8,8 +8,7 @@ import { actionType } from "../context/reducer";
 import { getAllAlbums } from "../api";
 import { CiSearch } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
-import { Button } from "@heroui/button";
-import { CardFooter } from "@heroui/card";
+
 
 
 const DashboardAlbums = () => {

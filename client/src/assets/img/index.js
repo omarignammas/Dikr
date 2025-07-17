@@ -18,3 +18,4 @@ export {default as BgDarkScreen} from "../img/BgDarkScreen.png";
 export {default as Afaaq} from "../img/Afaaq.png";
 export {default as AboutHomeOptions} from "../img/AboutHomeOptions.png";
 
+export {default as Aboutimage} from "../img/Aboutimage.png";

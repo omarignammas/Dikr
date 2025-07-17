@@ -12,7 +12,6 @@ const About = () => {
       transition={{ duration: 0.30, delay: 0.6 }}
       className="flex-1 bg-gradient-to-br from-orange-300 via-red-500 to-orange-400  overflow-y-auto mt-20 p-6 flex flex-col items-center gap-6 "
     >
-      <Header />
       <div className="text-3xl text-orange-200 font-Kodchasan font-semibold">DIKR APP</div>
 
       {/* Home Section */}

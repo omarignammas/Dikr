@@ -48,7 +48,7 @@ const DashboardRecites = () => {
      animate={{ opacity: 1, translateX: 0 }}
      transition={{ duration: 0.30, delay: 0.6 }}
      className="w-full h-auto pt-20 md:pt-24 px-4 flex items-center justify-center flex-col gap-6 bg-primary">
-        <Header/>
+
       <div className="w-full flex justify-center items-center gap-4">
         <input
           type="text"

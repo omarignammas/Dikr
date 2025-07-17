@@ -100,14 +100,6 @@ const Filter = ({ setFilteredaudios }) => {
           <p>Podcasts</p>
         </NavLink>
         <NavLink
-          to={"/Conferances"}
-          className={({ isActive }) =>
-            isActive ? isActiveCategoryStyle : isNotActiveCategory
-          }
-        >
-          <p>Conferances</p>
-        </NavLink>
-        <NavLink
           to={"/Books"}
           className={({ isActive }) =>
             isActive ? isActiveCategoryStyle : isNotActiveCategory
@@ -115,6 +107,15 @@ const Filter = ({ setFilteredaudios }) => {
         >
           <p>Books</p>
         </NavLink>
+        <NavLink
+          to={"/Conferances"}
+          className={({ isActive }) =>
+            isActive ? isActiveCategoryStyle : isNotActiveCategory
+          }
+        >
+          <p>Conferances</p>
+        </NavLink>
+       
       </div>
 
       <FilterButtons filterData={allAlbums?.Albums} flag={"Albums"} />

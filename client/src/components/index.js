@@ -52,6 +52,7 @@ export {default as SignUp} from "../components/SignUp";
 export {default as Stepper} from "../components/Stepper";
 export {default as Step} from "../components/Step";
 export {default as RegistrationButton} from "../components/RegistrationButton";
+export {default as HomeBooks} from "../components/HomeBooks";
 
 
 

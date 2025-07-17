@@ -103,7 +103,7 @@ const HomePodcasts = () => {
 
   return (
     <div className="w-full h-full flex flex-col items-center pt-20 md:pt-24 px-4 justify-center bg-primary">
-       <Header  />
+
       <SearchBar />
 
       {searchTerm.length > 0 && (
@@ -148,7 +148,7 @@ export const HomeaudioContainer = ({ audios }) => {
 
   // Check for null or undefined audios and handle accordingly
   if (!audios) {
-    return <p className="text-xl font-semibold text-red-400">No Recite available</p>; 
+    return <p className="text-xl font-semibold text-red-400">No Podcasts available</p>; 
   }else{
 
     return (

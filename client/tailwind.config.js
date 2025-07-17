@@ -105,7 +105,8 @@ module.exports = {
         'Kodchasan': ['Kodchasan', 'sans-serif'],
         'Inter': ['Inter', 'sans-serif'],
         'Questria': ['Questria', 'sans-serif'],
-        'playfair-display-Ds': ['Playfair Display', 'sans-serif']
+        'playfair-display-Ds': ['Playfair Display', 'sans-serif'],
+        'Poppins': ['Poppins', 'sans-serif'],
       },
     },
   },

@@ -138,11 +138,6 @@ const Dashboard = () => {
           >
             <FaBars className="text-lg" />
           </button>
-          
-          {/* Header component */}
-          <div className="flex-1">
-            <Header />
-          </div>
         </div>
 
         {/* Page Content */}

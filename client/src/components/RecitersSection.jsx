@@ -45,14 +45,14 @@ const RecitersSection = () => {
 
         </div>
 
-        <div className='relative z-10 max-w-7xl mx-auto'>
+        <div className=' relative z-10 max-w-7xl mx-auto'>
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4 }}
             viewport={{ once: true }}
-            className='text-center mb-11'
+            className=' text-center  mb-8'
           >
           <BlurText
            text="Featured Reciters"
@@ -60,7 +60,7 @@ const RecitersSection = () => {
            animateBy="words"
           direction="top"
           onAnimationComplete={handleAnimationComplete}
-          className="className='text-3xl sm:text-5xl lg:text-6xl font-semibold font-Kodchasan ml-[30%] mt-10 text-white mb-4"
+          className="className='text-3xl sm:text-5xl lg:text-6xl font-semibold font-Poppins ml-[30%] mt-5 text-orange-200 mb-5"
          />
 
         <BlurText
