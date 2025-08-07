@@ -1,5 +1,6 @@
 # WELCOME TO DIKR WEB APPLICATION 🕌📿🎧
 ![DIKR Home](HomeLPage.png)
+Application Live : https://dikrplaylist.netlify.app
 ---------------------------------------------------------------------------------------------------------------
 
 ## ABOUT DIKR
