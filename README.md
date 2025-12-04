@@ -3,7 +3,7 @@ Application Live : https://dikrplaylist.netlify.app
 ---------------------------------------------------------------------------------------------------------------
 ![DIKR Home](HomeLPage.png)
 
-## ABOUT DIKR
+## ABOUT DIKR App
 DIKR is your comprehensive digital spiritual companion, designed to support your spiritual development journey through the Holy Quran. Our application offers an immersive and personalized experience for listening, managing, and discovering Quranic recitations from around the world.
 ![DIKR AboutSection](HomePageV2.png)
 
